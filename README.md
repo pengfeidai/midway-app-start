@@ -164,13 +164,12 @@ export default {
     - 阿里淘宝部门出品，中文社区与文档，对国内开发者友好
     - [Midway 官网](https://midwayjs.org)
   - TypeORM
-    - 用 TypeScript 实现的数据库关系对象映射库 ORM（Object Relational Mapping）
-    - [TypeORM 官网](https://typeorm.io/)
-    - [TypeORM 中文文档](https://typeorm.biunav.com/zh/)
+    - 用 TypeScript 实现的数据库关系对象映射库 ORM
+    - [typegoose 官网](https://typegoose.github.io/typegoose/)
 - 数据库
-  - MySQL 5.7
+  - Mongo 5.0.5
     - 开源的关系型数据库
-    - [Mysql 官网]https://www.mysql.com/cn/
+    - [Mongo 官网](https://www.mongodb.com/)
 - 服务器
   - CentOS 8.2
     - RH 系列服务器端系统
