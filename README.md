@@ -1,19 +1,19 @@
 # midway-app-start
 
-基于 Midway 二次封装的开发框架，目录结构清晰，完成数据库CRUD ， Restful接口基础功能，应用服务基础功能。
+基于 Midway + Mongo 二次封装的开发框架，目录结构清晰，完成数据库 CRUD ， Restful 接口基础功能，应用服务基础功能。
 
 ## 功能点
-  - [x] 请求日志中间件
-  - [x] 统一响应中间件
-  - [x] 请求参数验证
-  - [x] husky钩子
-  - [x] commitlint规范
-  - [] swagger 接入
-  - [x] 封装 redis 工具类
-  - [x] 用户、角色关系demo代码
-  - [x] 基础类封装
-  - [x] TypeORM完成CRUD以及关联查询
 
+- [x] 请求日志中间件
+- [x] 统一响应中间件
+- [x] 请求参数验证
+- [x] husky 钩子
+- [x] commitlint 规范
+- [] swagger 接入
+- [x] 封装 redis 工具类
+- [x] 用户、角色关系 demo 代码
+- [x] 基础类封装
+- [x] Mongo 完成 CRUD
 
 ## Get Started
 
@@ -107,12 +107,15 @@ midway-app-start
 import { MidwayConfig } from '@midwayjs/core';
 
 export default {
-  orm: {
-    host: '127.0.0.1',
-    port: 3306,
-    username: 'root',
-    password: '123456',
-    database: 'test',
+  mongoose: {
+    client: {
+      uri: 'mongodb://localhost:27017/test',,
+      // uri: 'mongodb://localhost:27017/test?authSource=admin',
+      options: {
+        user: '',
+        pass: '',
+      },
+    },
   },
   // redis连接
   redis: {
