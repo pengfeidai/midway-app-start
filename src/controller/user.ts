@@ -56,7 +56,7 @@ export class APIController {
   @Del('', { summary: '删除用户' })
   async removeUser(@Body() body: RemoveUserDTO) {
     const { userId } = body;
-    const user = await this.userService.removeUser(userId);
-    return user;
+    // const user = await this.userService.removeUser(userId);
+    return userId;
   }
 }

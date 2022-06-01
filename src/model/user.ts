@@ -5,13 +5,13 @@
  */
 
 import { Provide } from '@midwayjs/decorator';
-import { InjectEntityModel } from '@midwayjs/orm';
+import { InjectEntityModel } from '@midwayjs/typegoose';
+import { ReturnModelType } from '@typegoose/typegoose';
 import { User } from '../entity/user';
-import { Repository } from 'typeorm';
 import { BaseModel } from '../core/base_model';
 
 @Provide()
 export class UserModel extends BaseModel {
   @InjectEntityModel(User)
-  repo: Repository<User>;
+  protected entity: ReturnModelType<typeof User>;
 }

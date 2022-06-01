@@ -14,7 +14,7 @@ export abstract class BaseModel {
   @Inject()
   protected ctx: Context;
 
-  protected repo;
+  protected entity;
 
   /**
    * 创建数据
@@ -22,7 +22,17 @@ export abstract class BaseModel {
    * @returns
    */
   async saveNew(params) {
-    const res = await this.repo.save(params);
+    const res = await this.entity.create(params);
+    return res;
+  }
+
+  /**
+   * 通过id获取信息
+   * @param id
+   * @returns
+   */
+  async getOneById(id: string) {
+    const res = await this.entity.findById(id).exec();
     return res;
   }
 
@@ -32,12 +42,12 @@ export abstract class BaseModel {
    * @returns
    */
   async getList(where = {}) {
-    const res = await this.repo.find({ where });
+    const res = await this.entity.find({ where });
     return res;
   }
 
   async getListAndCount(where = {}) {
-    const [list, count] = await this.repo.findAndCount({ where });
+    const [list, count] = await this.entity.findAndCount({ where });
     return [list, count];
   }
 
@@ -47,16 +57,7 @@ export abstract class BaseModel {
    * @returns
    */
   async getDetail(where = {}) {
-    const res = await this.repo.findOne({ where });
+    const res = await this.entity.findOne({ where });
     return res;
-  }
-
-  /**
-   * 软删除数据
-   * @param where
-   * @returns
-   */
-  async softRemove(where) {
-    return this.repo.softRemove(where);
   }
 }
