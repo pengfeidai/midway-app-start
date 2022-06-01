@@ -1,0 +1,6 @@
+# 忽略prettier的配置文件
+.prettierrc.js
+.eslintrc.js
+commitlint.config.js
+tsconfig.json
+package.json

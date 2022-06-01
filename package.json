@@ -1,0 +1,81 @@
+{
+  "name": "midway-app-start",
+  "version": "1.0.0",
+  "description": "this is ktw node server",
+  "private": true,
+  "dependencies": {
+    "@midwayjs/bootstrap": "^3.0.0",
+    "@midwayjs/core": "^3.0.0",
+    "@midwayjs/decorator": "^3.0.0",
+    "@midwayjs/info": "^3.0.0",
+    "@midwayjs/jwt": "^3.3.11",
+    "@midwayjs/koa": "^3.0.0",
+    "@midwayjs/logger": "^2.14.0",
+    "@midwayjs/orm": "^3.3.6",
+    "@midwayjs/redis": "^3.3.5",
+    "@midwayjs/swagger": "^3.3.8",
+    "@midwayjs/task": "^3.3.9",
+    "@midwayjs/validate": "^3.3.11",
+    "@mw-components/jaeger": "^11.0.9",
+    "@mw-components/koid": "^9.0.0",
+    "dayjs": "^1.11.2",
+    "lodash": "^4.17.21",
+    "mysql2": "^2.3.3",
+    "typeorm": "^0.3.6"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@midwayjs/cli": "^1.2.90",
+    "@midwayjs/mock": "^3.0.0",
+    "@types/ioredis": "^4.28.10",
+    "@types/jest": "^26.0.10",
+    "@types/koa": "^2.13.4",
+    "@types/node": "14",
+    "cross-env": "^6.0.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-header": "^3.1.1",
+    "eslint-plugin-json": "^3.1.0",
+    "husky": "^7.0.0",
+    "jest": "^26.4.0",
+    "mwts": "^1.0.5",
+    "prettier": "^2.6.2",
+    "swagger-ui-dist": "^4.11.1",
+    "ts-jest": "^26.2.0",
+    "typescript": "~4.6.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node ./bootstrap.js",
+    "dev": "cross-env NODE_ENV=local midway-bin dev --ts",
+    "test": "midway-bin test --ts",
+    "cov": "midway-bin cov --ts",
+    "lint": "eslint '**/*.ts'",
+    "lint:fix": "eslint --fix '**/*.ts'",
+    "ci": "npm run cov",
+    "build": "midway-bin build -c",
+    "prepare": "husky install"
+  },
+  "midway-bin-clean": [
+    ".vscode/.tsbuildinfo",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "302804389@qq.com",
+  "license": "MIT",
+  "lint-staged": {
+    "*.{md,json}": [
+      "prettier --write"
+    ],
+    "*.{js,ts,css}": [
+      "prettier --write",
+      "eslint"
+    ]
+  }
+}
