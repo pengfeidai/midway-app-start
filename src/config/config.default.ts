@@ -12,15 +12,16 @@ export default {
   koa: {
     port: 8001,
   },
-  orm: {
-    type: 'mysql',
-    synchronize: false, // 是否同步实体到数据库
-    logging: true, // 是否开启sql日志
-    timezone: '+08:00',
-    dateStrings: true, // 时间日期格式化
-    supportBigNumbers: true, // 是否支持处理数据库中的大数字（BIGINT和DECIMAL列）
-    bigNumberStrings: false,
+
+  mongoose: {
+    client: {
+      options: {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      },
+    },
   },
+
   // redis连接
   redis: {
     client: {

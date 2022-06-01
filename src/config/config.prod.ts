@@ -7,13 +7,14 @@
 import { MidwayConfig } from '@midwayjs/core';
 
 export default {
-  // orm连接配置
-  orm: {
-    host: '',
-    port: 3306,
-    username: '',
-    password: '',
-    database: '',
+  mongoose: {
+    client: {
+      uri: '',
+      options: {
+        user: '',
+        pass: '',
+      },
+    },
   },
   // redis连接
   redis: {
