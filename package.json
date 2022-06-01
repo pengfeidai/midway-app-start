@@ -11,17 +11,17 @@
     "@midwayjs/jwt": "^3.3.11",
     "@midwayjs/koa": "^3.0.0",
     "@midwayjs/logger": "^2.14.0",
-    "@midwayjs/orm": "^3.3.6",
     "@midwayjs/redis": "^3.3.5",
     "@midwayjs/swagger": "^3.3.8",
     "@midwayjs/task": "^3.3.9",
+    "@midwayjs/typegoose": "^3.3.5",
     "@midwayjs/validate": "^3.3.11",
     "@mw-components/jaeger": "^11.0.9",
     "@mw-components/koid": "^9.0.0",
+    "@typegoose/typegoose": "^9.8.1",
     "dayjs": "^1.11.2",
     "lodash": "^4.17.21",
-    "mysql2": "^2.3.3",
-    "typeorm": "^0.3.6"
+    "mongoose": "^6.3.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
