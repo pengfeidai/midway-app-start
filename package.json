@@ -1,7 +1,7 @@
 {
   "name": "midway-app-start",
   "version": "1.0.0",
-  "description": "this is ktw node server",
+  "description": "this is midway-app-start",
   "private": true,
   "dependencies": {
     "@midwayjs/bootstrap": "^3.0.0",
