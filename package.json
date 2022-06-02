@@ -16,12 +16,11 @@
     "@midwayjs/task": "^3.3.9",
     "@midwayjs/typegoose": "^3.3.5",
     "@midwayjs/validate": "^3.3.11",
-    "@mw-components/jaeger": "^11.0.9",
-    "@mw-components/koid": "^9.0.0",
     "@typegoose/typegoose": "^9.8.1",
     "dayjs": "^1.11.2",
     "lodash": "^4.17.21",
-    "mongoose": "^6.3.5"
+    "mongoose": "^6.3.5",
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
