@@ -21,6 +21,7 @@ import * as dayjs from 'dayjs';
 import * as lodash from 'lodash';
 
 import { NotFoundFilter } from './filter/notfound.filter';
+import { RequestIdMiddleware } from './middleware/request_id';
 import { AccessLogMiddleware } from './middleware/access_log';
 import { FormatMiddleware } from './middleware/format_response';
 
@@ -52,7 +53,11 @@ export class ContainerLifeCycle {
 
   async onReady(applicationContext: IMidwayContainer): Promise<void> {
     // 加载中间件
-    this.app.useMiddleware([AccessLogMiddleware, FormatMiddleware]);
+    this.app.useMiddleware([
+      RequestIdMiddleware,
+      AccessLogMiddleware,
+      FormatMiddleware,
+    ]);
     // 加载过滤器
     this.app.useFilter([NotFoundFilter]);
 
