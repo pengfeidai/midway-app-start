@@ -4,15 +4,15 @@
 
 ## 功能点
 
-- [x] 请求日志中间件
+- [x] 请求日志中间件，支持 traceId
 - [x] 统一响应中间件
 - [x] 请求参数验证
 - [x] husky 钩子
 - [x] commitlint 规范
-- [] swagger 接入
+- [x] swagger 接入
 - [x] 封装 redis 工具类
 - [x] 用户、角色关系 demo 代码
-- [x] 基础类封装
+- [x] 路由层、服务层、实体基础类封装
 - [x] Mongo 完成 CRUD
 
 ## Get Started
