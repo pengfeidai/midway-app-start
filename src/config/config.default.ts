@@ -11,6 +11,14 @@ export default {
   keys: '1653908660108_4685',
   koa: {
     port: 8001,
+    contextLoggerFormat: info => {
+      const ctx = info.ctx;
+      return `${info.timestamp} ${info.LEVEL} ${info.pid} [${ctx.reqId}-/${
+        ctx.ip
+      }/-/${Date.now() - ctx.startTime}ms ${ctx.method} ${ctx.url}] ${
+        info.message
+      }`;
+    },
   },
 
   mongoose: {
