@@ -16,11 +16,10 @@
     "@midwayjs/swagger": "^3.3.8",
     "@midwayjs/task": "^3.3.9",
     "@midwayjs/validate": "^3.3.11",
-    "@mw-components/jaeger": "^11.0.9",
-    "@mw-components/koid": "^9.0.0",
     "dayjs": "^1.11.2",
     "lodash": "^4.17.21",
     "mysql2": "^2.3.3",
+    "shortid": "^2.2.16",
     "typeorm": "^0.3.6"
   },
   "devDependencies": {
