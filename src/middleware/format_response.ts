@@ -28,13 +28,7 @@ export class FormatMiddleware implements IMiddleware<Context, NextFunction> {
         ctx.app.emit('error', err, ctx);
         const sysErr = err as SysError;
         const [message, messageStatus] = sysErr.message.split(' &>');
-        let status = sysErr.status || parseInt(messageStatus) || 500;
-        if (
-          sysErr.name === 'ValidationError' ||
-          message === 'ValidationError'
-        ) {
-          status = 422;
-        }
+        const status = sysErr.status || parseInt(messageStatus) || 500;
 
         ctx._internalError = sysErr;
 
