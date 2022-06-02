@@ -11,8 +11,6 @@ import * as koa from '@midwayjs/koa';
 import * as task from '@midwayjs/task';
 import * as validate from '@midwayjs/validate';
 import * as swagger from '@midwayjs/swagger';
-import * as jaeger from '@mw-components/jaeger';
-import * as koid from '@mw-components/koid';
 import * as redis from '@midwayjs/redis';
 import * as orm from '@midwayjs/orm';
 import * as info from '@midwayjs/info';
@@ -34,8 +32,6 @@ import { FormatMiddleware } from './middleware/format_response';
     redis,
     jwt,
     task,
-    jaeger,
-    koid,
     {
       component: swagger,
       enabledEnvironment: ['local'],
